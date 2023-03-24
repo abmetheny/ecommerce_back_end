@@ -35,8 +35,27 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// create a new tag
 router.post('/', (req, res) => {
-  // create a new tag
+  /* req.body should look like this...
+  {
+    tag_name: "yellow"
+  }
+*/
+
+  Tag.create(req.body)
+    .then((tag => {
+      // if there's product tags, we need to create pairings to bulk create in the ProductTag model
+      if (req.body.productIds.length) {
+        const tagProductIdArr = req.body.productIds.map((product_id) => {
+          return {
+            tag_id: tag.id,
+            product_id,
+          };
+        });
+        return ProductTag.bulkCreate(tagProductIdArr);
+      }
+  }))
 });
 
 router.put('/:id', (req, res) => {
