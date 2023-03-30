@@ -34,7 +34,7 @@ THEN I am able to successfully create, update, and delete data in my database
   * Delete
 
 ## Link to walkthrough tutorial
-[Ecommerce Back End walkthrough](https://drive.google.com/file/d/19Dshv_0KhsN8zuM275AF9tV77LjjyLN_/view?usp=share_link)
+[Ecommerce Back End Walkthrough](https://drive.google.com/file/d/1oL7FJKKAtSJpAQNngMovbuLVswyyQ23E/view?usp=sharing)
 
 ## Screenshots
 <img src="./assets/images/Screenshot1.png">
